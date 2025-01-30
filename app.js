@@ -27,11 +27,17 @@ sequelize
   })
   .catch((err) => console.log('Error: ' + err));
 
+
 // Routes
 app.use('/api/todos', todoRoutes);
+// process.env.PORT ||
 
-const PORT = process.env.PORT || 5000;
+const PORT =  5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+});
+
+app.get("/", async(req, res) => {
+  res.status(200).send({message:"db running"})
 });
