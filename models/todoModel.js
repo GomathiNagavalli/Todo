@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 
-const Todo = sequelize.define('Todos1', {
+const Todo = sequelize.define('Todos1s', {
   title: {
     type: DataTypes.STRING,
     allowNull: false,
